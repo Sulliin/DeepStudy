@@ -39,6 +39,7 @@ def main():
     np.random.shuffle(indices)  # 随机打乱索引顺序
 
     # 循环进行四折交叉验证
+    #实现四折交叉验证的方法是将数据集分为四份，然后分别选取其中三份作为训练集，剩下的一份作为验证集，然后重复这个过程四次，确保每一份数据都被用作训练集和验证集。
     for fold in range(5):
         # 划分训练集和测试集的索引
         test_indices = indices[fold * split_size:(fold + 1) * split_size]
